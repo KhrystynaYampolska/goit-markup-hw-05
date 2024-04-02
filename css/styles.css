@@ -617,12 +617,16 @@ footer .logo {
   position: absolute;
   right: 24px;
   top: 24px;
-  transition-property: background-color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  transition-property: background-color, border;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-exit-wrapper:hover {
+.modal-exit-wrapper:hover,
+.modal-exit-wrapper:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-exit {
@@ -646,7 +650,7 @@ footer .logo {
 }
 
 .modal-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .checkbox-wrap {
@@ -731,8 +735,7 @@ footer .logo {
   display: block;
   margin: 0 auto;
   transition-property: background-color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .send-button:hover,
@@ -766,6 +769,7 @@ footer .logo {
 
 .check-text-holder {
   position: relative;
+  display: inline-flex;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   width: 16px;
@@ -774,7 +778,6 @@ footer .logo {
   align-items: center;
   justify-content: center;
   fill: transparent;
-  display: inline-flex;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
